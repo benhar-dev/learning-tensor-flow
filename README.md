@@ -22,7 +22,7 @@ Tensors have the following properties.
 
 Tensors of 0 dimensions are called scalers.  These are single values.  Tensors can be reshaped.
 
-Example of tensor coding
+#### Example of tensor coding
 ```javascript
 let tensor = tf.tensor2d([[1, 2, 3], [4, 5 ,6]]);
 let scalar = tf.scalar(2);
