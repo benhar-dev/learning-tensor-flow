@@ -47,3 +47,12 @@ Tensors are excluded from the standard JavasScript memory management and must be
 
 ###  Using Raw TFJS Pre-Trained Models
 These types of models have not been wrapped in to a nice JavaScript class and as such you must take care to provide data correctly to the model and format the result after the model has completed.
+
+### Layers & Graph Models
+There are 2 types of model which can be used with TensorFlow.js.  Both can be used, but you must load them using their respective load function.
+
+#### Layers Model
+Layers are models with their building blocks included.  These are easier to read but suffer by being non-optimized.
+
+#### Graph Model
+These are highly optimized, so are faster, but are much harder to read (if you need to look inside them)
