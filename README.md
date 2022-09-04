@@ -30,3 +30,6 @@ let newTensor = tensor.mul(scalar);
 newTensor.print();
 let reshaped = tensor.reshape([6]);
 ```
+
+#### Important
+Tensors are excluded from the standard JavasScript memory management and must be disposed of using the dispose() method.  You can also call tidy() on tensorflow to dispose of all tensors. 
