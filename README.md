@@ -8,6 +8,15 @@ https://learning.edx.org/course/course-v1:Google+WebML102+3T2021/home
 * [Teachable Machine](https://teachablemachine.withgoogle.com/) - Very fast model training.
 * [Glitch](https://glitch.com/) - Program HMTL/CSS/JavaScript online
 
+## What to concider when selecting the model to use
+
+* Does it do the job?
+* Processing speed based on the target platform
+* Size of the model on disk space
+* Size of the model on memory
+
+In the smart camera example it was shown that pose and object detection were a possible match, however pose was limited to 6 people, vs 20+ people could be found with object detection.  Object detection was used and processing of a crowed was possible. 
+
 ## Key Terms
 
 ### Tensor
@@ -33,3 +42,8 @@ let reshaped = tensor.reshape([6]);
 
 #### Important
 Tensors are excluded from the standard JavasScript memory management and must be disposed of using the dispose() method.  You can also call tidy() on tensorflow to dispose of all tensors. 
+
+## Working with models
+
+###  Using Raw TFJS Pre-Trained Models
+These types of models have not been wrapped in to a nice JavaScript class and as such you must take care to provide data correctly to the model and format the result after the model has completed.
