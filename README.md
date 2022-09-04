@@ -49,10 +49,30 @@ Tensors are excluded from the standard JavasScript memory management and must be
 These types of models have not been wrapped in to a nice JavaScript class and as such you must take care to provide data correctly to the model and format the result after the model has completed.
 
 ### Layers & Graph Models
-There are 2 types of model which can be used with TensorFlow.js.  Both can be used, but you must load them using their respective load function.
+There are 2 types of model which can be used with TensorFlow.js.  Both can be used, but you must load them using their respective load function.  If you are unsure of what the type of model is, then open the model.json file and look for the property of "format".
+
+##### Example of loading a layers model
+```javascript
+
+const MODEL_PATH = 'path of model.json goes here';
+
+let model = undefined;
+
+async function loadModel() {
+   model = await tf.loadLayersModel(MODEL_PATH);
+   model.summary();
+}
+
+loadModel();
+```
 
 #### Layers Model
 Layers are models with their building blocks included.  These are easier to read but suffer by being non-optimized.
 
 #### Graph Model
 These are highly optimized, so are faster, but are much harder to read (if you need to look inside them)
+
+### What is included with a model
+
+* model.json - stores the details and specification of the model
+* shard1ofN.bin - a number of bin files (maximum size of 4MB) which hold the parameters of the model.
