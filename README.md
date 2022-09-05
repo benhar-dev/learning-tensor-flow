@@ -76,3 +76,6 @@ These are highly optimized, so are faster, but are much harder to read (if you n
 
 * model.json - stores the details and specification of the model
 * shard1ofN.bin - a number of bin files (maximum size of 4MB) which hold the parameters of the model.
+
+## Off topic
+[Running node.js as a windows service](https://www.youtube.com/watch?v=1smy9yyme1Y)
